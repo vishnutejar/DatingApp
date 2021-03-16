@@ -2,32 +2,51 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DatingApp.Views.HomeScreen"
-             Title="List Of Persons">
+             Title="List Of Persons"
+             BackgroundColor="#FFDE03">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label" x:Key="blacklable_header">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="18"/>
+            </Style>
+            <Style TargetType="Label" x:Key="blacklable_subheader">
+                <Setter Property="TextColor" Value="Gray"/>
+                <Setter Property="FontAttributes" Value="None"/>
+                <Setter Property="FontSize" Value="14"/>
+            </Style>
+
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="lstviewPersons" HasUnevenRows="True" RowHeight="200" >
+            <ListView x:Name="lstviewPersons" HasUnevenRows="True" SeparatorColor="Transparent" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Frame CornerRadius="2" HasShadow="True" Margin="10"  Padding="5" BackgroundColor="AntiqueWhite" BorderColor="GreenYellow">
-                                
-                            <Grid  Padding="20" BackgroundColor="BurlyWood">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="*"/>
-                                    <RowDefinition Height="*"/>
-                                </Grid.RowDefinitions>
-                                <Label  Grid.Row="0" Grid.Column="0" Text="Name " FontAttributes="Italic" TextColor="Blue" FontSize="Medium"/>
-                                <Label Grid.Row="1" Grid.Column="0"  Text="{Binding Name}"  FontSize="Large" FontAttributes="Bold" TextColor="Black"/>
-                                <Label Grid.Row="0" Grid.Column="1" Text="Age " FontAttributes="Italic" TextColor="Blue" FontSize="Medium"/>
-                                <Label Grid.Row="1" Grid.Column="1" Text="{Binding Age}" FontSize="Large" FontAttributes="Bold" TextColor="Black"/>
-                                <Label  Grid.Row="0" Grid.Column="2" Text="Active" FontAttributes="Italic" TextColor="Blue" FontSize="Medium"/>
-                                <Label Grid.Row="1" Grid.Column="2" Text="{Binding Active}" FontSize="Large" FontAttributes="Bold" TextColor="Black"/>
-                            </Grid>
+                            <Frame CornerRadius="10" HasShadow="True" Margin="10"  Padding="5" BackgroundColor="White" BorderColor="Gray">
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                    <Image Source="icon.png" WidthRequest="120" HeightRequest="120" />
+                                    <Grid   HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Label Grid.Row="0" Grid.Column="0" Text="Name " Style="{StaticResource blacklable_subheader}" />
+                                        <Label Grid.Row="1" Grid.Column="0"  Text="{Binding Name}" Style="{StaticResource blacklable_header}" />
+                                        <Label Grid.Row="0" Grid.Column="1" Text="Age " Style="{StaticResource blacklable_subheader}"/>
+                                        <Label Grid.Row="1" Grid.Column="1" Text="{Binding Age}" Style="{StaticResource blacklable_header}"/>
+                                        <Label Grid.Row="0" Grid.Column="2" Text="Active" Style="{StaticResource blacklable_subheader}"/>
+                                        <CheckBox Grid.Row="1" Grid.Column="2" IsEnabled="False" IsChecked="{Binding Active}" />
+                                    </Grid>
+                                </StackLayout>
                             </Frame>
 
                         </ViewCell>

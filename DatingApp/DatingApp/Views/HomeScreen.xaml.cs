@@ -22,6 +22,8 @@ namespace DatingApp.Views
             listOfPersons.Add(new Person { Name = "Vani", Age = "21", Active = true });
             listOfPersons.Add(new Person { Name = "sri", Age = "19", Active = false });
             listOfPersons.Add(new Person { Name = "Ram", Age = "25", Active = true});
+            listOfPersons.Add(new Person { Name = "Ram Theja", Age = "25", Active = true});
+            listOfPersons.Add(new Person { Name = "Priyank jain", Age = "25", Active = true});
         }
     }
 }
