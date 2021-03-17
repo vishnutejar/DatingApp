@@ -11,7 +11,7 @@ namespace DatingApp
         {
             InitializeComponent();
             
-            MainPage = new NavigationPage(new HomeScreen());
+            MainPage = new NavigationPage(new LoginPage());
         }
 
         protected override void OnStart()
