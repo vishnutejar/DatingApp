@@ -3,6 +3,31 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DatingApp.App">
     <Application.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label" x:Key="lbbold">
+                <Setter Property="FontSize" Value="40"/>
+                <Setter Property="FontFamily" Value="SansBold"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+            <Style TargetType="Label" x:Key="lblight">
+                <Setter Property="FontSize" Value="Small"/>
+                <Setter Property="FontFamily" Value="SansLight"/>
+                <Setter Property="TextColor" Value="Black"/>
+            </Style>
+            <Style TargetType="Label" x:Key="lbregular">
+                <Setter Property="FontSize" Value="Large"/>
+                <Setter Property="FontFamily" Value="SansRegular"/>
+                <Setter Property="TextColor" Value="Black"/>
+            </Style>
+            <Style TargetType="Entry" x:Key="etyRoundedcorner">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontFamily" Value="SansRegular"/>
+                
 
+            </Style>
+            <Style TargetType="ContentPage" x:Key="PageBackground">
+                <Setter Property="BackgroundImageSource" Value="backgroundimage.jpg"></Setter>
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
