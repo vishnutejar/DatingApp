@@ -17,5 +17,9 @@ namespace DatingApp.Views
             InitializeComponent();
         }
 
+        private void GoToHomeScreen(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ParallaxCarouselHomePage());
+        }
     }
 }

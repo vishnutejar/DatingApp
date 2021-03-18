@@ -17,7 +17,7 @@
             <Label Text="Login" Style="{StaticResource lbbold}" Margin="0,0,0,30" HorizontalTextAlignment="Center"/>
             <RcEntry:RoundCornerEntry Grid.Row="1" Placeholder="User Name" Keyboard="Email" BackgroundColor="#D1C4E9" PlaceholderColor="Black"/>
             <RcEntry:RoundCornerEntry Grid.Row="2" Margin="0,10,0,0"   Placeholder="Password" BackgroundColor="#D1C4E9" IsPassword="True" PlaceholderColor="Black"/>
-            <Button Grid.Row="3" Text="Login" CornerRadius="10" BackgroundColor="#FF4081" TextColor="White"></Button>
+            <Button Grid.Row="3" Text="Login" CornerRadius="10" Clicked="GoToHomeScreen" BackgroundColor="#FF4081" TextColor="White"></Button>
         </Grid>
     </ContentPage.Content>
 </ContentPage>
