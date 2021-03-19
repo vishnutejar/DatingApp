@@ -3,6 +3,34 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DatingApp.App">
     <Application.Resources>
+        <ResourceDictionary>
+            <Style TargetType="{x:Type Entry}">
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontFamily" Value="SansRegular"/>
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="PlaceholderColor" Value="White"/>
 
+            </Style>
+            <Style TargetType="{x:Type Label}">
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontFamily" Value="SansRegular"/>
+                <Setter Property="FontSize" Value="20"/>
+            </Style>
+            <Style TargetType="{x:Type Button}">
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontFamily" Value="SansBold"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="BorderColor" Value="White"/>
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="BorderWidth" Value="3"/>
+            </Style>
+
+            <Style TargetType="{x:Type ContentPage}"
+               ApplyToDerivedTypes="True">
+                <Setter Property="BackgroundImageSource" Value="backgroundimage.jpg"/>
+                <Setter Property="Opacity" Value="0.9"/>
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

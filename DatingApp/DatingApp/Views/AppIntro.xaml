@@ -2,26 +2,19 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DatingApp.Views.AppIntro"
-             BackgroundImageSource="backgroundimage.jpg"
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
-        <Grid VerticalOptions="FillAndExpand" HorizontalOptions="StartAndExpand">
-
+        <Grid VerticalOptions="Fill" HorizontalOptions="StartAndExpand">
             <Grid.RowDefinitions>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-
-            <Image Grid.Row="0" Margin="0,100,0,0" Source="applogo.png" BackgroundColor="AliceBlue"  WidthRequest="150" HeightRequest="150" HorizontalOptions="CenterAndExpand"/>
-            <Label Grid.Row="1"  Text="Pro Dating" FontSize="30" FontAttributes="Bold" TextColor="White" HorizontalOptions="CenterAndExpand"/>
-            <Label Grid.Row="2" TextColor="White" Margin="50"  HorizontalTextAlignment="Center" FontSize="Large" Text="This application used to conenct peoples ,share your thoughs to your friends and connections"/>
-            <Label Grid.Row="3"  HorizontalOptions="EndAndExpand" FontSize="40" Padding="10" Margin="10" TextDecorations="Underline"  Text="Skip" TextTransform="Uppercase" TextColor="White">
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="GotoHomeScreen"/>
-                </Label.GestureRecognizers>
-            </Label>
+            <Image Grid.Row="0" Margin="0,50,0,0"  Source="applogo.png" BackgroundColor="White"  WidthRequest="150" HeightRequest="150" HorizontalOptions="CenterAndExpand"/>
+            <Label Grid.Row="1"  Text="Pro Dating" FontSize="50" FontFamily="SansBold"  HorizontalOptions="CenterAndExpand"/>
+            <Label Grid.Row="2"  Margin="50"  HorizontalTextAlignment="Center" FontSize="Large" Text="This application used to conenct peoples ,share your thoughs to your friends and connections"/>
+            <Button Grid.Row="3" Margin="10"  VerticalOptions="End" HorizontalOptions="End" Clicked="GotoHomeScreen" Text="Skip"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

@@ -11,6 +11,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Fonts\SourceSansPro-Bold.ttf" />
+    <None Remove="Fonts\SourceSansPro-Light.ttf" />
+    <None Remove="Fonts\SourceSansPro-Regular.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Fonts\SourceSansPro-Bold.ttf" />
+    <EmbeddedResource Include="Fonts\SourceSansPro-Light.ttf" />
+    <EmbeddedResource Include="Fonts\SourceSansPro-Regular.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
     <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
   </ItemGroup>
@@ -20,6 +32,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\ForgotPassword.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\GenderInformationPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\HomeScreen.xaml">

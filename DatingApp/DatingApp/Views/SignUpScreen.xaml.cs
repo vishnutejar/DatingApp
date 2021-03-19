@@ -16,5 +16,15 @@ namespace DatingApp.Views
         {
             InitializeComponent();
         }
+
+        private void GoToBack(object sender, EventArgs e)
+        {
+            Navigation.PopAsync();
+        }
+
+        private void GoToNextPage(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new GenderInformationPage());
+        }
     }
 }
