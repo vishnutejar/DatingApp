@@ -10,21 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace DatingApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ForgotPassword : ContentPage
+    public partial class GenderInformationPage : ContentPage
     {
-        public ForgotPassword()
+        public GenderInformationPage()
         {
             InitializeComponent();
-        }
-
-        private void GoBack(object sender, EventArgs e)
-        {
-            Navigation.PopAsync();
-        }
-
-        private void SendEmail(object sender, EventArgs e)
-        {
-
         }
     }
 }
