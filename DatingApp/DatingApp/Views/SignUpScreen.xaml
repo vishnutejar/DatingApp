@@ -11,10 +11,10 @@
                     <TapGestureRecognizer Tapped="GoToBack"/>
                 </Image.GestureRecognizers>
             </Image>
-            <Label Text="My First Name is" Margin="20,20,0,0" FontSize="28" TextColor="White"/>
-            <Entry Keyboard="Text" Margin="10,120,0,0" TextColor="White"/>
-            <Label Margin="10,0,0,0" TextColor="White" FontSize="Medium" Text="This is how appear in  dating app and your not able to change it "/>
-            <Button Text="Continue" CornerRadius="20" BackgroundColor="White"   Margin="20" VerticalOptions="EndAndExpand" Clicked="GoToNextPage"/>
+            <Label Text="My First Name is" Margin="20,20,0,0" />
+            <Entry Keyboard="Text" Margin="10,120,0,0" />
+            <Label Margin="10,0,0,0"  Text="This is how appear in  dating app and your not able to change it "/>
+            <Button Text="Continue"  Margin="20" VerticalOptions="EndAndExpand" Clicked="GoToNextPage"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
