@@ -16,5 +16,15 @@ namespace DatingApp.Views
         {
             InitializeComponent();
         }
+
+        private void GoBack(object sender, EventArgs e)
+        {
+            Navigation.PopAsync();
+        }
+
+        private void GoToShowMePage(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ShowMePage());
+        }
     }
 }

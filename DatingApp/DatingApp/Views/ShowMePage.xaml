@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DatingApp.Views.GenderInformationPage"
-             NavigationPage.HasNavigationBar="False"
-             BackgroundImageSource="backgroundimage.jpg">
+             x:Class="DatingApp.Views.ShowMePage"
+             BackgroundImageSource="backgroundimage.jpg"
+             NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical" Padding="20" VerticalOptions="FillAndExpand">
             <Image Source="icon.png" HorizontalOptions="Start" HeightRequest="24" WidthRequest="24" >
@@ -11,16 +11,14 @@
                     <TapGestureRecognizer Tapped="GoBack"/>
                 </Image.GestureRecognizers>
             </Image>
-            <Label Margin="30,0,0,0" Text="I am a" FontSize="34" TextColor="White" FontAttributes="Bold"/>
+            <Label Margin="30,0,0,0" Text="Show me" FontSize="34" TextColor="White" FontAttributes="Bold"/>
             <Button Margin="60,0" VerticalOptions="CenterAndExpand" Text="WOMAN" TextColor="White" CornerRadius="28" BackgroundColor="Transparent" BorderWidth="2" BorderColor="White"/>
             <Button Margin="60,0" VerticalOptions="CenterAndExpand"  Text="MAN" TextColor="White" CornerRadius="28" BackgroundColor="Transparent" BorderWidth="2" BorderColor="White"/>
             <Button Margin="60,0" VerticalOptions="CenterAndExpand"  Text="Others" TextColor="White" CornerRadius="28" BackgroundColor="Transparent" BorderWidth="2" BorderColor="White"/>
-            <StackLayout  Orientation="Horizontal" Margin="20,0" VerticalOptions="EndAndExpand">
-                <CheckBox   />
-                <Label Text="Show my gender on my profile" FontSize="20" TextColor="White"/>
-            </StackLayout>
-            <Button Text="Continue" CornerRadius="20" BackgroundColor="White"  Margin="20" VerticalOptions="EndAndExpand" Clicked="GoToShowMePage"/>
+           
+            <Button Text="Continue" CornerRadius="20" BackgroundColor="White"  Margin="20" VerticalOptions="EndAndExpand" Clicked="GoToNextPage"/>
 
         </StackLayout>
+
     </ContentPage.Content>
 </ContentPage>
