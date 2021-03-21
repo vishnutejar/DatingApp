@@ -3,18 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DatingApp.Views.SignUpScreen"
              BackgroundImageSource="backgroundimage.jpg"
-             NavigationPage.HasNavigationBar="False">
+             NavigationPage.HasNavigationBar="False"
+             xmlns:resource="clr-namespace:DatingApp.Resx">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical" Padding="20" VerticalOptions="FillAndExpand">
-            <Image Source="icon.png" HorizontalOptions="Start" WidthRequest="24" HeightRequest="24">
+            <Image Source="leftarrowback.png" HorizontalOptions="Start" WidthRequest="24" HeightRequest="24">
                 <Image.GestureRecognizers>
                     <TapGestureRecognizer Tapped="GoToBack"/>
                 </Image.GestureRecognizers>
             </Image>
-            <Label Text="My First Name is" Margin="20,20,0,0" />
+            <Label Text="{x:Static resource:AppResource.MyFirstNameIs}" Margin="20,20,0,0" />
             <Entry Keyboard="Text" Margin="10,120,0,0" />
-            <Label Margin="10,0,0,0"  Text="This is how appear in  dating app and your not able to change it "/>
-            <Button Text="Continue"  Margin="20" VerticalOptions="EndAndExpand" Clicked="GoToNextPage"/>
+            <Label Margin="10,0,0,0"  Text="{x:Static resource:AppResource.UsernameTag}"/>
+            <Button Text="{x:Static resource:AppResource.Continue}"  Margin="20" VerticalOptions="EndAndExpand" Clicked="GoToNextPage"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

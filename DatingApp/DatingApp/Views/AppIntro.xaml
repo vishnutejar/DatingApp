@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DatingApp.Views.AppIntro"
-             NavigationPage.HasNavigationBar="False">
+             NavigationPage.HasNavigationBar="False"
+             xmlns:resources="clr-namespace:DatingApp.Resx">
     <ContentPage.Content>
         <Grid VerticalOptions="Fill" HorizontalOptions="StartAndExpand">
             <Grid.RowDefinitions>
@@ -12,9 +13,9 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Image Grid.Row="0" Margin="0,50,0,0"  Source="applogo.png" BackgroundColor="White"  WidthRequest="150" HeightRequest="150" HorizontalOptions="CenterAndExpand"/>
-            <Label Grid.Row="1"  Text="Pro Dating" FontSize="50" FontFamily="SansBold"  HorizontalOptions="CenterAndExpand"/>
-            <Label Grid.Row="2"  Margin="50"  HorizontalTextAlignment="Center" FontSize="Large" Text="This application used to conenct peoples ,share your thoughs to your friends and connections"/>
-            <Button Grid.Row="3" Margin="10"  VerticalOptions="End" HorizontalOptions="End" Clicked="GotoHomeScreen" Text="Skip"/>
+            <Label Grid.Row="1"  Text="{x:Static resources:AppResource.ProDating}" FontSize="50" FontFamily="SansBold"  HorizontalOptions="CenterAndExpand"/>
+            <Label Grid.Row="2"  Margin="50"  HorizontalTextAlignment="Center" FontSize="Large" Text="{x:Static resources:AppResource.AppIntro}"/>
+            <Button Grid.Row="3" Margin="10"  VerticalOptions="End" HorizontalOptions="End" Clicked="GotoHomeScreen" Text="{x:Static resources:AppResource.Skip}"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

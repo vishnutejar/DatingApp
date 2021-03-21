@@ -7,10 +7,10 @@ using Xamarin.Forms.Xaml;
 namespace DatingApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class HomeScreen : ContentPage
+    public partial class LikedPersonsListPage : ContentPage
     {
         ObservableCollection<Person> listOfPersons = new System.Collections.ObjectModel.ObservableCollection<Person>();
-        public HomeScreen()
+        public LikedPersonsListPage()
         {
             InitializeComponent();
             AddedPersonDate();
