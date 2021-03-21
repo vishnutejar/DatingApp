@@ -10,20 +10,21 @@ using Xamarin.Forms.Xaml;
 namespace DatingApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class GenderInformationPage : ContentPage
+    public partial class ShowMePage : ContentPage
     {
-        public GenderInformationPage()
+        public ShowMePage()
         {
             InitializeComponent();
         }
+
         private void GoBack(object sender, EventArgs e)
         {
             Navigation.PopAsync();
         }
 
-        private void GoToShowMePage(object sender, EventArgs e)
+        private void GoToNextPage(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new ShowMePage());
+            Navigation.PushAsync(new PassionsPage());
         }
     }
 }

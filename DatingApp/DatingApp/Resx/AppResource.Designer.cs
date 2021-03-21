@@ -124,6 +124,24 @@ namespace DatingApp.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Passions.
+        /// </summary>
+        internal static string Passions {
+            get {
+                return ResourceManager.GetString("Passions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Let everyone know what you&apos;re passionate about, by adding it to your profile.
+        /// </summary>
+        internal static string Passiontag {
+            get {
+                return ResourceManager.GetString("Passiontag", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Password.
         /// </summary>
         internal static string Password {

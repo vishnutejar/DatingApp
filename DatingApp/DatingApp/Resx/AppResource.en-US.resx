@@ -138,6 +138,12 @@
   <data name="MyFirstNameIs" xml:space="preserve">
     <value>My First Name is</value>
   </data>
+  <data name="Passions" xml:space="preserve">
+    <value>Passions</value>
+  </data>
+  <data name="Passiontag" xml:space="preserve">
+    <value>Let everyone know what you're passionate about, by adding it to your profile</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>Password</value>
   </data>

@@ -7,7 +7,7 @@
              xmlns:resource="clr-namespace:DatingApp.Resx">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical" Padding="20" VerticalOptions="FillAndExpand">
-            <Image Source="icon.png" HorizontalOptions="Start" WidthRequest="24" HeightRequest="24">
+            <Image Source="leftarrowback.png" HorizontalOptions="Start" WidthRequest="24" HeightRequest="24">
                 <Image.GestureRecognizers>
                     <TapGestureRecognizer Tapped="GoToBack"/>
                 </Image.GestureRecognizers>
