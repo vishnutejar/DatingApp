@@ -59,7 +59,7 @@
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
-            <Button  Grid.Row="4" Grid.ColumnSpan="2" Clicked="GotoHomeScreen"  HorizontalOptions="CenterAndExpand" Text="{x:Static resources:AppResource.Continue}" />
+            <Button x:Name="countContinueButton" Grid.Row="4" Grid.ColumnSpan="2" Clicked="GotoHomeScreen"  HorizontalOptions="CenterAndExpand" Text="{x:Static resources:AppResource.Continue}" />
         </Grid>
     </ContentPage.Content>
 </ContentPage>

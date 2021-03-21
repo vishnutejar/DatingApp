@@ -123,6 +123,9 @@
   <data name="Continue" xml:space="preserve">
     <value>Continue</value>
   </data>
+  <data name="Count" xml:space="preserve">
+    <value>Count</value>
+  </data>
   <data name="CreatYourAccount" xml:space="preserve">
     <value>Creat Your Account!</value>
   </data>

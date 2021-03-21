@@ -24,7 +24,7 @@ namespace DatingApp.Views
 
         private void ValidateUser(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new HomeScreen());
+            Navigation.PushAsync(new LandingScreenWithTabbedOptions());
         }
 
         private void GoToForgotPassword(object sender, EventArgs e)

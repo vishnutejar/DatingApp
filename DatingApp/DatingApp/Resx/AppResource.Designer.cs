@@ -79,6 +79,15 @@ namespace DatingApp.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Count.
+        /// </summary>
+        internal static string Count {
+            get {
+                return ResourceManager.GetString("Count", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Creat Your Account!.
         /// </summary>
         internal static string CreatYourAccount {

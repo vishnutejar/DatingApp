@@ -1,4 +1,5 @@
 ﻿using DatingApp.Models;
+using DatingApp.Resx;
 using System;
 using System.Collections.ObjectModel;
 
@@ -10,6 +11,7 @@ namespace DatingApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PassionsPage : ContentPage
     {
+        int PassionLimitted = 5;
         ObservableCollection<PassionItems> PassionItems { get; set; } = new ObservableCollection<PassionItems>();
         public PassionsPage()
         {
@@ -67,17 +69,29 @@ namespace DatingApp.Views
 
         private void GotoHomeScreen(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new HomeScreen());
+            Navigation.PushAsync(new LikedPersonsListPage());
         }
 
         private void SelectedPassionNames(object sender, SelectionChangedEventArgs e)
         {
-            var current = e.CurrentSelection as PassionItems;
+            var current = e.CurrentSelection;
+            var selectedItemCount = current.Count;
 
-            ObservableCollection<PassionItems> passionItems = new ObservableCollection<PassionItems>();
-            passionItems.Add(current);
-            for(int i = 0; i < passionItems.Count; i++) {
-                Console.WriteLine(passionItems.Count);
+            for (int i = 0; i < current.Count; i++)
+            {
+
+                if (PassionLimitted >= selectedItemCount)
+                {
+                    var data = current[i] as PassionItems;
+                    countContinueButton.Text = AppResource.Continue + " " + AppResource.Count + " " + "( " + selectedItemCount + " / " + PassionLimitted + ")";
+
+                }
+                else
+                {
+                    DisplayAlert("", "only 5 passion we can select", "ok");
+                    ((CollectionView)sender).SelectedItem = null;
+
+                }
             }
         }
     }
