@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DatingApp.Views.LisOfPassions"
+             BackgroundImageSource="backgroundimage.jpg"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid Margin="20" VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                
+            </Grid.ColumnDefinitions>
+            <Image Grid.Row="0" Grid.Column="0" HorizontalOptions="Start" Source="leftarrowback.png" WidthRequest="24" HeightRequest="24"/>
+            <Label Text="SKIP" Grid.Row="0" Grid.Column="1" HorizontalOptions="End"/>
+            <Label Grid.Row="1" Grid.Column="0" Text="Passions" FontSize="40" FontAttributes="Bold" TextColor="White"/>
+            <Label Grid.Row="2" Grid.ColumnSpan="2" Text="Let everyone know what you're passinate about, by adding it to your profile" FontSize="18" TextColor="White"/>
+            <!--<ListView Grid.Row="3" Grid.ColumnSpan="2"  x:Name="lstOfPassions">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                        <Grid>
+                            <Frame BackgroundColor="Transparent" BorderColor="White" Padding="10" CornerRadius="30" >
+                                <Label Text="{Binding PassionName}" FontSize="18" TextColor="White" FontAttributes="Bold"/>
+                            </Frame>
+                        </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>-->
+            <CollectionView Grid.Row="3" Grid.ColumnSpan="2"  x:Name="lstOfPassions" SelectionMode="Multiple" SelectionChanged="lstOfPassions_SelectionChanged">
+                <CollectionView.ItemsLayout >
+                    <GridItemsLayout Orientation="Vertical" Span="3" HorizontalItemSpacing="5" VerticalItemSpacing="20"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Frame BackgroundColor="Transparent" BorderColor="White" Padding="5"  CornerRadius="30"  >
+                                <Label Text="{Binding PassionName}" FontSize="18" TextColor="White" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+                            </Frame>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Button Grid.Row="4" Grid.ColumnSpan="2"  x:Name="continueCount" Text="Continue" CornerRadius="20" Margin="0,20,0,0" BackgroundColor="White" Clicked="GoToAddPhotosPage"/>
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

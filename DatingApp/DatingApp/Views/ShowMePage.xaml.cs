@@ -24,7 +24,7 @@ namespace DatingApp.Views
 
         private void GoToNextPage(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new LisOfPassions());
         }
     }
 }
