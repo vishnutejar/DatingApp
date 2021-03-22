@@ -2,7 +2,16 @@
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DatingApp.Views.LandingScreenWithTabbedOptions"
-            xmlns:pages="clr-namespace:DatingApp.Views">
-  <!--Pages can be added as references or inline-->
+            xmlns:pages="clr-namespace:DatingApp.Views"
+            NavigationPage.HasNavigationBar="False"
+            SelectedTabColor="Azure"
+            UnselectedTabColor="White"
+            >
+  
+    <!--Pages can be added as references or inline-->
+    
     <pages:PeronsListPage IconImageSource="leftarrowback.png" BackgroundColor="White"/>
+    <pages:LikedPersonsListPage IconImageSource="leftarrowback.png" BackgroundColor="White"/>
+    <pages:ChatListPage IconImageSource="leftarrowback.png" BackgroundColor="White"/>
+    <pages:ProfilePage IconImageSource="leftarrowback.png" BackgroundColor="White"/>
 </TabbedPage>
