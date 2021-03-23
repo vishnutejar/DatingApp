@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AddAtleast" xml:space="preserve">
+    <value>Add at least 2 photos to continue</value>
+  </data>
+  <data name="AddPhotos" xml:space="preserve">
+    <value>Add Photos</value>
+  </data>
   <data name="AppIntro" xml:space="preserve">
     <value>This application used to conenct peoples ,share your thoughs to your friends and connections</value>
   </data>

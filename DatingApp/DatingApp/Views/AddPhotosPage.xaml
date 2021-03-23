@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DatingApp.Views.AddPhotosPage"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:resources="clr-namespace:DatingApp.Resx">
+    <ContentPage.Content>
+        <Grid Padding="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Image Source="icon.png" Grid.Row="0" Grid.Column="0" HorizontalOptions="Start"  WidthRequest="24" HeightRequest="24">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="GoBack"/>
+                </Image.GestureRecognizers>
+            </Image>
+            <Label Grid.Row="1" HorizontalOptions="CenterAndExpand" Text="{x:Static resources:AppResource.AddPhotos}" FontSize="30" />
+            <Label Grid.Row="2" HorizontalOptions="CenterAndExpand" Text="{x:Static resources:AppResource.AddAtleast}" FontSize="18" />
+            <!--<Rectangle Grid.Row="3" Fill="Transparent"
+           Stroke="White"
+           StrokeThickness="4"
+           StrokeDashArray="1,1"
+           StrokeDashOffset="6"
+           WidthRequest="150"
+           HeightRequest="200"
+           HorizontalOptions="Start" />-->
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -61,6 +61,24 @@ namespace DatingApp.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add at least 2 photos to continue.
+        /// </summary>
+        internal static string AddAtleast {
+            get {
+                return ResourceManager.GetString("AddAtleast", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add Photos.
+        /// </summary>
+        internal static string AddPhotos {
+            get {
+                return ResourceManager.GetString("AddPhotos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to This application used to conenct peoples ,share your thoughs to your friends and connections.
         /// </summary>
         internal static string AppIntro {

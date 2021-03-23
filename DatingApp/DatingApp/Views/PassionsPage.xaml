@@ -39,7 +39,7 @@
                     <TapGestureRecognizer Tapped="GoBack"/>
                 </Image.GestureRecognizers>
             </Image>
-            <Button Grid.Row="0" Grid.Column="1"  Margin="10"  HorizontalOptions="End" Clicked="GotoHomeScreen" Text="{x:Static resources:AppResource.Skip}"/>
+            <Button Grid.Row="0" Grid.Column="1"  Margin="10"  HorizontalOptions="End" Clicked="GotoAddPhotosPage" Text="{x:Static resources:AppResource.Skip}"/>
             <Label Grid.Row="1" Grid.Column="0" Margin="10,0" FontSize="40" FontFamily="SansBold" HorizontalOptions="Start" Text="{x:Static resources:AppResource.Passions}"/>
             <Label Grid.Row="2"  Grid.ColumnSpan="2" Margin="10,0,0,0" Text="{x:Static resources:AppResource.Passiontag}" />
             <CollectionView Grid.Row="3" SelectionChanged="SelectedPassionNames"  Grid.ColumnSpan="2" x:Name="lstPassionName" HorizontalOptions="Center"  SelectionMode="Multiple" >
@@ -59,7 +59,7 @@
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
-            <Button x:Name="countContinueButton" Grid.Row="4" Grid.ColumnSpan="2" Clicked="GotoHomeScreen"  HorizontalOptions="CenterAndExpand" Text="{x:Static resources:AppResource.Continue}" />
+            <Button x:Name="countContinueButton" Grid.Row="4" Grid.ColumnSpan="2" Clicked="GotoAddPhotosPage"  HorizontalOptions="CenterAndExpand" Text="{x:Static resources:AppResource.Continue}" />
         </Grid>
     </ContentPage.Content>
 </ContentPage>

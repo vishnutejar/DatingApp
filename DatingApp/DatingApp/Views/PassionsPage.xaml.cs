@@ -67,9 +67,9 @@ namespace DatingApp.Views
             Navigation.PopAsync();
         }
 
-        private void GotoHomeScreen(object sender, EventArgs e)
+        private void GotoAddPhotosPage(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new LikedPersonsListPage());
+            Navigation.PushAsync(new AddPhotosPage());
         }
 
         private void SelectedPassionNames(object sender, SelectionChangedEventArgs e)
