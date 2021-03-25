@@ -24,24 +24,7 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Grid  Grid.Row="0" Grid.Column="0" >                    <Grid.GestureRecognizers>                        <TapGestureRecognizer Tapped="Pickimage"/>                    </Grid.GestureRecognizers>                    <Image x:Name="selectedimage" WidthRequest="150" HeightRequest="150" BackgroundColor="Red" Margin="5" Aspect="AspectFill" />                    <Rectangle                  Fill="transparent"                    Stroke="white"                    StrokeThickness="4"                    StrokeDashArray="1,1"                    StrokeDashOffset="6"                    WidthRequest="150"                    HeightRequest="150"                    HorizontalOptions="Start">                    </Rectangle>                </Grid>
-
-
-                <Rectangle
-                       Grid.Row="0" Grid.Column="1"
-                       Fill="Transparent"
-                       Stroke="White"
-                       StrokeThickness="4"
-                       StrokeDashArray="1,1"
-                       StrokeDashOffset="6"
-                       WidthRequest="150"
-                       HeightRequest="150"
-                       HorizontalOptions="Start" 
-                               
-                       >
-                    <Rectangle.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="PickImageOne"/>
-                    </Rectangle.GestureRecognizers>
-                </Rectangle>
+                <Grid  Grid.Row="0" Grid.Column="1" >                    <Grid.GestureRecognizers>                        <TapGestureRecognizer Tapped="CaptureImageFromCamera"/>                    </Grid.GestureRecognizers>                    <Image x:Name="selectedimagefromcamera" WidthRequest="150" HeightRequest="150" BackgroundColor="Red" Margin="5" Aspect="AspectFill" />                    <Rectangle                  Fill="transparent"                    Stroke="white"                    StrokeThickness="4"                    StrokeDashArray="1,1"                    StrokeDashOffset="6"                    WidthRequest="150"                    HeightRequest="150"                    HorizontalOptions="Start">                    </Rectangle>                </Grid>
                 <Rectangle
                        Grid.Row="0" Grid.Column="2"
                        Fill="Transparent"
