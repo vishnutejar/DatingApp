@@ -46,9 +46,22 @@ namespace DatingApp.Views
             return selctedimage;
         }
 
+        async Task<ImageSource> CaptureImage() {
+            await CrossMedia.Current.Initialize();
+            var captureImage = await CrossMedia.Current.TakePhotoAsync(null);
+            var captureimage = ImageSource.FromStream(() => captureImage.GetStream());
+            return captureimage;
+        } 
+
         private void Pickimage(object sender, EventArgs e)
         {
             selectedimage.Source= GetMeidaFile().Result;
+        }
+
+        private void CaptureImageFromCamera(object sender, EventArgs e)
+        {
+            selectedimagefromcamera.Source= CaptureImage().Result;
+
         }
     }
 }

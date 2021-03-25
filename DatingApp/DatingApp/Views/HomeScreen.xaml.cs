@@ -19,9 +19,9 @@ namespace DatingApp.Views
 
         private void AddedPersonDate()
         {
-            listOfPersons.Add(new Person { Name = "Vani", Age = "21", Active = true });
-            listOfPersons.Add(new Person { Name = "sri", Age = "19", Active = false });
-            listOfPersons.Add(new Person { Name = "Ram", Age = "25", Active = true});
+            listOfPersons.Add(new Person { Name = "Vani", Age = "21", Active = true , PersonImae =""});
+            listOfPersons.Add(new Person { Name = "sri", Age = "19", Active = false , PersonImae="" });
+            listOfPersons.Add(new Person { Name = "Ram", Age = "25", Active = true, PersonImae =""});
         }
     }
 }

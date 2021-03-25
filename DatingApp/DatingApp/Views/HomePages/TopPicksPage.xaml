@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DatingApp.Views.HomePages.TopPicksPage"
+             BackgroundImageSource="backgroundimage.jpg">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Spacing="20" >
+            <Label Text="Upgrade to Tinder Gold , for ore Top Picks!" 
+                    TextColor="White"
+                   HorizontalTextAlignment="Center"
+                   Margin="20"
+                   FontAttributes="Bold"
+                  FontSize="20"/>
+            <CollectionView x:Name="lstOfTopPickers" Margin="20">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" Span="2" VerticalItemSpacing="20" HorizontalItemSpacing="10"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BorderColor="Gold"  Padding="0" CornerRadius="10" Margin="10" >
+                            <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                                <Image Source="{Binding PersonImae}" Aspect="Fill" WidthRequest="200" HeightRequest="200"/>
+                                <Grid  VerticalOptions="End" HorizontalOptions="FillAndExpand">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Column="0" Margin="10" VerticalTextAlignment="Center" Text="{Binding Name}" FontSize="30" FontAttributes="Bold" TextColor="Black"/>
+                                    <ImageButton Grid.Column="1" BackgroundColor="Transparent" Margin="0,-80,0,0" Source="icon.png" HorizontalOptions="End" WidthRequest="50" HeightRequest="50"/>
+                                </Grid>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

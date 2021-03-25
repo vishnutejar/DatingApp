@@ -1,12 +1,85 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DatingApp.Views.HomePages.ChatPage">
+             x:Class="DatingApp.Views.HomePages.ChatPage"
+             BackgroundImageSource="backgroundimage.jpg">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid Padding="10" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="8*"/>
+            </Grid.ColumnDefinitions>
+            <Image  Grid.Row="0" Grid.Column="0" Margin="10"  Source="icon.png"  WidthRequest="24" HeightRequest="24"/>
+            <Entry  Grid.Row="0" Grid.Column="1" Margin="10"  PlaceholderColor="White"  Placeholder="Search 0 Matches"  TextColor="White"/>
+            <Label  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"  Margin="10" Text="New Matches" TextColor="White" FontSize="20" FontAttributes="Bold"/>
+            <CollectionView HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="150" Grid.Row="2" Grid.ColumnSpan="2" Grid.Column="0" x:Name="hrlstlikedperons">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Horizontal" ItemSpacing="10"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Image Grid.Column="0"
+                                   Source="{Binding .}"
+                               WidthRequest="100"   
+                               HeightRequest="100"
+                               Aspect="AspectFill"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center">
+                                <Image.Clip>
+                                    <EllipseGeometry
+                                    Center="50,50"
+                                    RadiusX="50"
+                                    RadiusY="50"/>
+                                </Image.Clip>
+                            </Image>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Label  Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Margin="10" Text="Messages" TextColor="White" FontSize="20" FontAttributes="Bold"/>
+            <CollectionView Grid.ColumnSpan="2" Grid.Row="5" Grid.Column="0" x:Name="vrlistmessage">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="10"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0"
+                                   Source="{Binding .}"
+                               WidthRequest="100"   
+                               HeightRequest="100"
+                               Aspect="AspectFill"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center">
+                                <Image.Clip>
+                                    <EllipseGeometry
+                                    Center="50,50"
+                                    RadiusX="50"
+                                    RadiusY="50"/>
+                                </Image.Clip>
+                            </Image>
+                            <StackLayout VerticalOptions="CenterAndExpand" Spacing="0" Grid.Column="1" Orientation="Vertical">
+                                <Label Text="Team Tiner" FontSize="20" FontAttributes="Bold" TextColor="White"/>
+                                <Label Text="Your may have forgotten a few ..." FontSize="Small" TextColor="WhiteSmoke"/>
+                            </StackLayout>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+
     </ContentPage.Content>
 </ContentPage>
