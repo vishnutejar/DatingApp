@@ -62,7 +62,7 @@ namespace DatingApp.Views
 
         private void GoToAddPhotosPage(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new AddPhotoScreen());
         }
 
         private void lstOfPassions_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -70,7 +70,7 @@ namespace DatingApp.Views
             var itemsSelected = e.CurrentSelection;
             var mySelectionCount = itemsSelected.Count;
             continueCount.Text = "Continue " + "(" + mySelectionCount + "/" + "5" + ")";
-
+            
         }
     }
 }

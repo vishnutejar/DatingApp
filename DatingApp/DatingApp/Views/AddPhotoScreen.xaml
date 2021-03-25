@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DatingApp.Views.AddPhotoScreen"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundImageSource="backgroundimage.jpg">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Image Source="icon.png" HorizontalOptions="Start" HeightRequest="24" WidthRequest="24" >
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="GoBack"/>
+                </Image.GestureRecognizers>
+            </Image>
+            <Label Text="Add Photos" FontSize="34" HorizontalOptions="CenterAndExpand" TextColor="White" FontAttributes="Bold"/>
+            <Label Text="Add atlest 2 photos to be continue" HorizontalOptions="CenterAndExpand" FontSize="14" TextColor="White" FontAttributes="Bold"/>
+            <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid  Grid.Row="0" Grid.Column="0" >                    <Grid.GestureRecognizers>                        <TapGestureRecognizer Tapped="Pickimage"/>                    </Grid.GestureRecognizers>                    <Image x:Name="selectedimage" WidthRequest="150" HeightRequest="150" BackgroundColor="Red" Margin="5" Aspect="AspectFill" />                    <Rectangle                  Fill="transparent"                    Stroke="white"                    StrokeThickness="4"                    StrokeDashArray="1,1"                    StrokeDashOffset="6"                    WidthRequest="150"                    HeightRequest="150"                    HorizontalOptions="Start">                    </Rectangle>                </Grid>
+
+
+                <Rectangle
+                       Grid.Row="0" Grid.Column="1"
+                       Fill="Transparent"
+                       Stroke="White"
+                       StrokeThickness="4"
+                       StrokeDashArray="1,1"
+                       StrokeDashOffset="6"
+                       WidthRequest="150"
+                       HeightRequest="150"
+                       HorizontalOptions="Start" 
+                               
+                       >
+                    <Rectangle.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="PickImageOne"/>
+                    </Rectangle.GestureRecognizers>
+                </Rectangle>
+                <Rectangle
+                       Grid.Row="0" Grid.Column="2"
+                       Fill="Transparent"
+                       Stroke="White"
+                       StrokeThickness="4"
+                       StrokeDashArray="1,1"
+                       StrokeDashOffset="6"
+                       WidthRequest="150"
+                       HeightRequest="150"
+                       HorizontalOptions="Start" 
+                               
+                      >
+                    <Rectangle.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="PickImageTwo"/>
+                    </Rectangle.GestureRecognizers>
+                </Rectangle>
+                <Rectangle
+                       Grid.Row="1" Grid.Column="0"
+                       Fill="Transparent"
+                       Stroke="White"
+                       StrokeThickness="4"
+                       StrokeDashArray="1,1"
+                       StrokeDashOffset="6"
+                       WidthRequest="150"
+                       HeightRequest="150"
+                       HorizontalOptions="Start" 
+                               
+                       />
+                <Rectangle
+                       Grid.Row="1" Grid.Column="1"
+                       Fill="Transparent"
+                       Stroke="White"
+                       StrokeThickness="4"
+                       StrokeDashArray="1,1"
+                       StrokeDashOffset="6"
+                       WidthRequest="150"
+                       HeightRequest="150"
+                       HorizontalOptions="Start" 
+                               
+                       />
+                <Rectangle
+                       Grid.Row="1" Grid.Column="2"
+                       Fill="Transparent"
+                       Stroke="White"
+                       StrokeThickness="4"
+                       StrokeDashArray="1,1"
+                       StrokeDashOffset="6"
+                       WidthRequest="150"
+                       HeightRequest="150"
+                       HorizontalOptions="Start" 
+                               
+                       />
+              
+            </Grid>
+            <Button Text="Continue" CornerRadius="20" BackgroundColor="White"  Margin="20" VerticalOptions="EndAndExpand" Clicked="GoToHomeScreen"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

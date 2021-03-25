@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DatingApp.Views.HomeTabbedPage"
+            NavigationPage.HasNavigationBar="False"
+            xmlns:pages="clr-namespace:DatingApp.Views.HomePages">
+    <pages:ListOfPerson IconImageSource="icon.png"/>
+    <pages:LikedPersonsInformation IconImageSource="icon.png"/>
+    <pages:ChatPage IconImageSource="icon.png"/>
+    <pages:ProfilePage IconImageSource="icon.png"/>
+</TabbedPage>
