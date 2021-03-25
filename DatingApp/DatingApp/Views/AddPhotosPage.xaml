@@ -20,14 +20,43 @@
             </Image>
             <Label Grid.Row="1" HorizontalOptions="CenterAndExpand" Text="{x:Static resources:AppResource.AddPhotos}" FontSize="30" />
             <Label Grid.Row="2" HorizontalOptions="CenterAndExpand" Text="{x:Static resources:AppResource.AddAtleast}" FontSize="18" />
-            <!--<Rectangle Grid.Row="3" Fill="Transparent"
-           Stroke="White"
-           StrokeThickness="4"
-           StrokeDashArray="1,1"
-           StrokeDashOffset="6"
-           WidthRequest="150"
-           HeightRequest="200"
-           HorizontalOptions="Start" />-->
+            <Grid Grid.Row="3" VerticalOptions="CenterAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="SelectImageFromGallery"/>
+                    </Grid.GestureRecognizers>
+                    <Image x:Name="selectedimage1" WidthRequest="150" HeightRequest="150" Margin="5" Aspect="AspectFill" />                    <Rectangle                      Fill="transparent"                    Stroke="white"                    StrokeThickness="4"                    StrokeDashArray="1,1"                    StrokeDashOffset="6"                    WidthRequest="150"                    HeightRequest="150"                    HorizontalOptions="Start">                    </Rectangle>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="PhotoCaptureFromCamera"/>
+                    </Grid.GestureRecognizers>
+                    <Image x:Name="selectedimage2" WidthRequest="150" HeightRequest="150"  Margin="5" Aspect="AspectFill" />                    <Rectangle                      Fill="transparent"                    Stroke="white"                    StrokeThickness="4"                    StrokeDashArray="1,1"                    StrokeDashOffset="6"                    WidthRequest="150"                    HeightRequest="150"                    HorizontalOptions="Start">                    </Rectangle>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="2">
+                    <Image x:Name="selectedimage3" WidthRequest="150" HeightRequest="150"  Margin="5" Aspect="AspectFill" />                    <Rectangle                      Fill="transparent"                    Stroke="white"                    StrokeThickness="4"                    StrokeDashArray="1,1"                    StrokeDashOffset="6"                    WidthRequest="150"                    HeightRequest="150"                    HorizontalOptions="Start">                    </Rectangle>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="0">
+                    <Image x:Name="selectedimage4" WidthRequest="150" HeightRequest="150" Margin="5" Aspect="AspectFill" />                    <Rectangle                      Fill="transparent"                    Stroke="white"                    StrokeThickness="4"                    StrokeDashArray="1,1"                    StrokeDashOffset="6"                    WidthRequest="150"                    HeightRequest="150"                    HorizontalOptions="Start">                    </Rectangle>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="1">
+                    <Image x:Name="selectedimage5" WidthRequest="150" HeightRequest="150"  Margin="5" Aspect="AspectFill" />                    <Rectangle                      Fill="transparent"                    Stroke="white"                    StrokeThickness="4"                    StrokeDashArray="1,1"                    StrokeDashOffset="6"                    WidthRequest="150"                    HeightRequest="150"                    HorizontalOptions="Start">                    </Rectangle>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="2">
+                    <Image x:Name="selectedimage6" WidthRequest="150" HeightRequest="150"  Margin="5" Aspect="AspectFill" />                    <Rectangle                      Fill="transparent"                    Stroke="white"                    StrokeThickness="4"                    StrokeDashArray="1,1"                    StrokeDashOffset="6"                    WidthRequest="150"                    HeightRequest="150"                    HorizontalOptions="Start">                    </Rectangle>
+                </Grid>
+            </Grid>
+            <Button Grid.Row="4" VerticalOptions="EndAndExpand" Text="{x:Static resources:AppResource.Continue}" CornerRadius="20" Margin="0,20,0,0" Clicked="GoToHomeScreen"/>
+
         </Grid>
     </ContentPage.Content>
 </ContentPage>
