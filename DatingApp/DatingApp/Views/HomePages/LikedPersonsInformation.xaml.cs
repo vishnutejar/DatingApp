@@ -8,6 +8,8 @@ namespace DatingApp.Views.HomePages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LikedPersonsInformation : TabbedPage
     {
+        ObservableCollection<string> lstOflikedPersons { get; set; } = new ObservableCollection<string>();
+        ObservableCollection<string> lstOfmessage { get; set; } = new ObservableCollection<string>();
         public LikedPersonsInformation()
         {
             InitializeComponent();
