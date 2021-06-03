@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DatingApp.Views.LisOfPassions"
              BackgroundImageSource="backgroundimage.jpg"
-             NavigationPage.HasNavigationBar="False">
+             Shell.NavBarIsVisible="False">
     <ContentPage.Content>
         <Grid Margin="20" VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand">
             <Grid.RowDefinitions>

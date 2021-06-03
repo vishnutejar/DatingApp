@@ -1,11 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DatingApp.Views.HomeTabbedPage"
-            NavigationPage.HasNavigationBar="False"
-            xmlns:pages="clr-namespace:DatingApp.Views.HomePages">
-    <pages:ListOfPerson IconImageSource="icon.png"/>
-    <pages:LikedPersonsInformation IconImageSource="icon.png"/>
-    <pages:ChatPage IconImageSource="icon.png"/>
-    <pages:ProfilePage IconImageSource="icon.png"/>
-</TabbedPage>
+            xmlns:pages="clr-namespace:DatingApp.Views.HomePages" 
+       xmlns:views="clr-namespace:DatingApp.Views" x:DataType="views:HomeTabbedPage">
+
+    <TabBar >
+        <Tab  Icon="ic_action_whatshot">
+            <pages:ListOfPerson IconImageSource="icon.png"/>
+        </Tab>
+        <Tab Icon="ic_action_circle_notifications">
+            <ShellContent Title="Like"
+                         ContentTemplate="{DataTemplate pages:ListOfLikesPage}" />
+            <ShellContent Title="Top Picks"
+                         ContentTemplate="{DataTemplate pages:TopPicksPage}" />
+        </Tab>
+
+
+        <Tab  Icon="ic_action_chat_bubble">
+            <pages:ChatPage />
+        </Tab>
+
+        <Tab Icon="ic_action_person">
+            <pages:ProfilePage/>
+        </Tab>
+    </TabBar>
+  
+</Shell>

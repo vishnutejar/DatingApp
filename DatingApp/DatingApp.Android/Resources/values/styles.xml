@@ -19,4 +19,10 @@
 	  <item name="android:statusBarColor">@color/status_bar_color</item>
 	  <item name="android:windowLightStatusBar">true</item>
   </style>
+	<style name="MyTheme.Splash" parent ="Theme.AppCompat.Light.NoActionBar">
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowFullscreen">true</item>
+		<item name="android:windowContentOverlay">@null</item>
+		<item name="android:windowActionBar">true</item>
+	</style>
 </resources>

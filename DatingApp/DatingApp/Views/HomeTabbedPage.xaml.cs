@@ -10,7 +10,7 @@ using Xamarin.Forms.Xaml;
 namespace DatingApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class HomeTabbedPage : TabbedPage
+    public partial class HomeTabbedPage : Shell
     {
         public HomeTabbedPage()
         {

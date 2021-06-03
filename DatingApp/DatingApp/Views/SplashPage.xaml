@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DatingApp.Views.SplashPage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <Image x:Name="imgLogo" Source="ic_launcher" Aspect="AspectFit" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
