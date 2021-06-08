@@ -5,50 +5,62 @@
              Shell.NavBarIsVisible="False"
              Shell.TabBarBackgroundColor="Orange"
              BackgroundImageSource="backgroundimage.jpg">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="ImageButton">
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="WidthRequest" Value="55"/>
+                <Setter Property="HeightRequest" Value="55"/>
+                <Setter Property="CornerRadius" Value="30"/>
+                <Setter Property="BorderColor" Value="White"/>
+                <Setter Property="BorderWidth" Value="2"/>
+                <Setter Property="Padding" Value="5"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout Orientation="Vertical">
-            <Grid>
-                <CarouselView x:Name="personsimages">
-                    <CarouselView.ItemTemplate>
-                        <DataTemplate>
-                            <Grid>
-                                <Image Opacity="0.9" Source="{Binding .}" Aspect="AspectFill"  HeightRequest="200"/>
+        <CarouselView x:Name="personsimages" VerticalOptions="FillAndExpand">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Image Opacity="0.9" Source="{Binding .}" Aspect="AspectFill"  HeightRequest="200"/>
+                        <StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand">
+                            <Grid  Margin="20">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Row="0"  Grid.Column="0" Text="Ranita" TextColor="White" FontSize="30" />
+                                <Label Grid.Row="0"  Grid.Column="1" Text="26" TextColor="White" FontSize="18" />
+                                <Image Grid.Row="0"  Grid.Column="2" Source="icon.png"  WidthRequest="20" HeightRequest="20"/>
+                                <Image Grid.Row="0"  Grid.Column="3" Source="icon.png" WidthRequest="20" HeightRequest="20"/>
+                                <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" Text="what am i doing hear?" TextColor="White" FontSize="16" />
+                                <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" Text="well,damne if i know. :)" TextColor="White" FontSize="16" />
+                                <Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" Text="well,damne if i know. :)" TextColor="White" FontSize="16" />
+
                             </Grid>
-                        </DataTemplate>
-                    </CarouselView.ItemTemplate>
-                </CarouselView>
-                <Grid  VerticalOptions="EndAndExpand" Margin="20">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="Auto"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                    </Grid.RowDefinitions>
-                    <Label Grid.Row="0"  Grid.Column="0" Text="Ranita" TextColor="White" FontSize="30" />
-                    <Label Grid.Row="0"  Grid.Column="1" Text="26" TextColor="White" FontSize="18" />
-                    <Image Grid.Row="0"  Grid.Column="2" Source="icon.png"  WidthRequest="20" HeightRequest="20"/>
-                    <Image Grid.Row="0"  Grid.Column="3" Source="icon.png" WidthRequest="20" HeightRequest="20"/>
-                    <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" Text="what am i doing hear?" TextColor="White" FontSize="16" />
-                    <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" Text="well,damne if i know. :)" TextColor="White" FontSize="16" />
-                    <Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" Text="well,damne if i know. :)" TextColor="White" FontSize="16" />
+                            <StackLayout VerticalOptions="EndAndExpand" Orientation="Horizontal" Spacing="15" HorizontalOptions="Center"  Margin="10">
+                                <ImageButton Source="ic_action_replay_circle_filled"  />
+                                <ImageButton Source="ic_action_cancel"  />
+                                <ImageButton Source="ic_action_star"  />
+                                <ImageButton Source="ic_action_favorite"  />
+                                <ImageButton Source="ic_action_bolt"  />
+                                
+                            </StackLayout>
 
-                </Grid>
-            </Grid>
-
-            <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="CenterAndExpand" Margin="30">
-                <Image Source="icon.png" />
-                <Image Source="icon.png" />
-                <Image Source="icon.png" />
-                <Image Source="icon.png" />
-                <Image Source="icon.png" />
-            </StackLayout>
-        </StackLayout>
+                        </StackLayout>
+                      </Grid>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
     </ContentPage.Content>
 </ContentPage>
